@@ -18,7 +18,7 @@ class Blog extends React.Component {
         <SEO title="All posts" />
         <Bio />
         <div style={{ margin: "20px 0 40px" }}>
-          {posts.map(({ node }) => {
+          {posts.filter(e => e.node.frontmatter.title.includes("Test")).map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug}>

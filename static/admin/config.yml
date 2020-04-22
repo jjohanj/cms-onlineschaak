@@ -15,14 +15,5 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: description, label: Description }
-      - { name: body, label: Body, widget: markdown }
-  - name: groepa
-    label: Groep A
-    folder: content/groepa
-    create: true
-    fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: description, label: Description }
+      - { name: category, label: Category }
       - { name: body, label: Body, widget: markdown }
