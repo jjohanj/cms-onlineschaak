@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
+import Commento from "../components/commento"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -31,6 +32,8 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <MDXRenderer>{post.body}</MDXRenderer>
+        <iframe src="https://lichess.org/embed/RxZTgNXz#5?theme=auto&bg=auto"
+width="600" height="397"></iframe>
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -62,6 +65,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
+        <Commento id={post.id}/>
       </Layout>
     )
   }
