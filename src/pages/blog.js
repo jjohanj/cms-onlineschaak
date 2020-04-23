@@ -8,18 +8,25 @@ import { rhythm } from "../utils/typography"
 import Button from "../components/button"
 
 class Blog extends React.Component {
+  constructor(props) {
+  super(props);
+  this.state = {posts: this.props.data.allMdx.edges}
+  console.log(this.state.posts)
+  console.log(this.props)
+}
   render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMdx.edges
-        console.log(posts);
+    // const { data } = this.props
+    // const siteTitle = data.site.siteMetadata.title
+    // let posts = data.allMdx.edges
+    //
+    // posts = posts.filter(e => e.node.frontmatter.category.includes(this.props.location.state.category))
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
+      <Layout location={this.props.location} >
+        <SEO title="All posts" title="Blog" />
         <Bio />
         <div style={{ margin: "20px 0 40px" }}>
-          {posts.filter(e => e.node.frontmatter.category.includes(this.props.location.state.category)).map(({ node }) => {
+          {this.state.posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug}>
