@@ -12,13 +12,14 @@ class Blog extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMdx.edges
+        console.log(posts);
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
         <Bio />
         <div style={{ margin: "20px 0 40px" }}>
-          {posts.filter(e => e.node.frontmatter.title.includes("Test")).map(({ node }) => {
+          {posts.filter(e => e.node.frontmatter.category.includes(this.props.location.state.category)).map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug}>
