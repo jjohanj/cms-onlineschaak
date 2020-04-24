@@ -10,23 +10,29 @@ import Button from "../components/button"
 class Blog extends React.Component {
   constructor(props) {
   super(props);
-  this.state = {posts: this.props.data.allMdx.edges}
-  console.log(this.state.posts)
-  console.log(this.props)
+    this.state = {posts: this.props.data.allMdx.edges, category: "all"}
+    console.log(this.state.posts)
+    console.log(this.state.category)
+}
+UNSAFE_componentWillMount() {
+  if (typeof window == 'undefined') {
+    return;
+  }
+  this.setState(() => ({ category: this.props.location.state.category}));
 }
   render() {
     // const { data } = this.props
     // const siteTitle = data.site.siteMetadata.title
     // let posts = data.allMdx.edges
     //
-    // posts = posts.filter(e => e.node.frontmatter.category.includes(this.props.location.state.category))
+    console.log(this.state.category)
 
     return (
       <Layout location={this.props.location} >
         <SEO title="All posts" title="Blog" />
         <Bio />
         <div style={{ margin: "20px 0 40px" }}>
-          {this.state.posts.map(({ node }) => {
+          {this.state.posts.filter(e => e.node.frontmatter.category.includes(this.state.category)).map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug}>
