@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-
+import "./styles.css"
 import { rhythm, scale } from "../utils/typography"
 
 class Layout extends React.Component {
@@ -75,6 +75,7 @@ class Layout extends React.Component {
     )
   }
 }
+
 
 const Wrapper = styled.div`
   min-height: 100vh;

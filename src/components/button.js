@@ -15,17 +15,22 @@ const ButtonWrapper = styled.button`
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
+  width: 150;
+  margin: 30px;
+  height: 150px;
+  border-radius: 20px;
+  color: #e3e3e3;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #2d2d2d, #363636);
+  box-shadow:  10px 10px 9px #191919,
+  -10px -10px 9px #4b4b4b;
 
-  background: ${props => props.props.background || "black"};
-  color: ${props => props.props.color || "rgb(255, 255, 255)"};
-  font-size: ${props => props.props.fontSize || "15px"};
-  font-weight: ${props => props.props.fontWeight || "600"};
-  border-radius: ${props => props.props.radius || "6px"};
-  margin-top: ${props => props.props.marginTop};
-  margin-bottom: ${props => props.props.marginBottom};
 
   &:hover {
-    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);
+
+                 background: #323232;
+                 box-shadow:  12px 12px 9px #191919,
+                            -12px -12px 9px #4b4b4b;
   }
 `
 
