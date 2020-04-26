@@ -65,12 +65,12 @@ class Layout extends React.Component {
         >
           <header>{header}</header>
           <main>{children}</main>
-        </div>
         <Footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Footer>
+        </div>
       </Wrapper>
     )
   }
@@ -79,11 +79,18 @@ class Layout extends React.Component {
 
 const Wrapper = styled.div`
   min-height: 100vh;
+  position: relative;
 `
 
 const Footer = styled.footer`
   text-align: center;
   margin: 24px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
 `
 
 export default Layout

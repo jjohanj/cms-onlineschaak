@@ -1,13 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = "Online-schaakcompetitie-partijen"
+    const siteTitle = "Online-Schaakcompetitie-Partijen"
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -15,18 +16,39 @@ class IndexPage extends React.Component {
           title="Home"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <Link state={{ category: "groepa" }}to="/blog/">
-          <Button marginTop="35px">Groep A</Button>
-        </Link>
-        <Link state={{ category: "groepb" }}to="/blog/">
-          <Button marginTop="35px">Groep B</Button>
-        </Link>
-        <Link state={{ category: "groepc" }}to="/blog/">
-          <Button marginTop="35px">Groep C</Button>
-        </Link>
+        <HomeList>
+          <li>
+          <Link state={{ category: "Groep A" }}to="/blog/">
+            <Button marginTop="35px">Groep A</Button>
+          </Link>
+          </li>
+          <li>
+          <Link state={{ category: "Groep B"}}to="/blog/">
+            <Button marginTop="35px">Groep B</Button>
+          </Link>
+          </li>
+          <li>
+          <Link state={{ category: "groepc" }}to="/blog/">
+            <Button marginTop="35px">Groep C</Button>
+          </Link>
+          </li>
+        </HomeList>
       </Layout>
     )
   }
 }
+const HomeList = styled.ul `
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20%;
+
+  li {
+    margin-bottom: 40px;
+    margin-left: 40px;
+  }
+`;
 
 export default IndexPage

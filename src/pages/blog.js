@@ -6,36 +6,39 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import Button from "../components/button"
+import styled from "styled-components"
 
 class Blog extends React.Component {
   constructor(props) {
   super(props);
-    this.state = {posts: this.props.data.allMdx.edges, category: "all"}
-    console.log(this.state.posts)
-    console.log(this.state.category)
+    this.state = {posts: this.props.data.allMdx.edges, category: "all", round: "Beschrijving"}
 }
 UNSAFE_componentWillMount() {
   if (typeof window == 'undefined') {
     return;
   }
-  this.setState(() => ({ category: this.props.location.state.category}));
+  this.setState({category: this.props.location.state.category});
 }
+
+  handleRound = (select) => {
+    this.setState({ round: select});
+  }
   render() {
-    // const { data } = this.props
-    // const siteTitle = data.site.siteMetadata.title
-    // let posts = data.allMdx.edges
-    //
-    console.log(this.state.category)
 
     return (
       <Layout location={this.props.location} >
         <SEO title="All posts" title="Blog" />
-        <Bio />
         <div style={{ margin: "20px 0 40px" }}>
-          {this.state.posts.filter(e => e.node.frontmatter.category.includes(this.state.category)).map(({ node }) => {
+        <h1>{this.state.category}</h1>
+        <List>
+        <li><button onClick={(event) => { this.handleRound("Johan");}}>Ronde 1</button></li>
+        <li><button>Ronde 2</button></li>
+        </List>
+        <GameList>
+          {this.state.posts.filter(e => e.node.frontmatter.category.includes(this.state.category) && e.node.frontmatter.description.includes(this.state.round)).map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <div key={node.fields.slug}>
+              <li key={node.fields.slug}>
                 <h3
                   style={{
                     marginBottom: rhythm(1 / 4),
@@ -49,22 +52,60 @@ UNSAFE_componentWillMount() {
                   </Link>
                 </h3>
                 <small>{node.frontmatter.date}</small>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </div>
+              </li>
             )
           })}
+          </GameList>
         </div>
+
+
         <Link to="/">
-          <Button marginTop="85px">Go Home</Button>
+          <button>Go Home</button>
         </Link>
       </Layout>
     )
   }
 }
+
+const GameList = styled.ul `
+  list-style: none;
+  li {
+    position: relative;
+    padding-left: 20px;
+    &:before {
+      content: "*";
+      position: absolute;
+      left: 0px;
+    }
+  }
+`;
+
+
+const List = styled.ul`
+    list-style: none;
+    li {
+      display: inline-block;
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      padding: 0.5rem 1rem;;
+      margin: 0.7rem;
+      border-radius: 2px;
+      background: linear-gradient(145deg, #2d2d2d, #363636);
+      box-shadow:  1px 1px 1px #161616,
+                   -1px -1px 1px #4f4f4f;
+      color: #E3E3E3;
+      &:hover {
+        box-shadow: inset 1px 1px 2px #161616,
+            inset -1px -1px 2px #4f4f4f;
+            color: #fff;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  `
 
 export default Blog
 

@@ -7,3 +7,26 @@ a {
   box-shadow: none;
   color: #e3e3e3;
 }
+
+main {
+  position: relative;
+}
+button {
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1rem;;
+  margin: 0.7rem;
+  border-radius: 2px;
+  background: linear-gradient(145deg, #2d2d2d, #363636);
+  box-shadow:  1px 1px 1px #161616,
+               -1px -1px 1px #4f4f4f;
+  color: #E3E3E3;
+}
+button:hover {
+    box-shadow: inset 1px 1px 2px #161616,
+        inset -1px -1px 2px #4f4f4f;
+        color: #fff;
+  }
+  button:first-child {
+    margin-left: 0;
+  }
