@@ -1,9 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-
 import Commento from "../components/commento"
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -13,14 +11,22 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.mdx
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-    console.log(post.body)
+
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={post.frontmatter.category}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
         <h1>{post.frontmatter.title}</h1>
+        <p style={{ float: `right`}}>
+        <Link to="/">
+        <button>Home</button>
+        </Link>
+        <Link state={{  round: post.frontmatter.description, category: post.frontmatter.category}}to="/blog/">
+        <button marginTop="35px">Terug</button>
+        </Link>
+        </p>
         <p
           style={{
             ...scale(-1 / 5),
@@ -31,16 +37,16 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-        <div>
-        <iframe src={`https://lichess.org/embed/${post.body}#0?theme=auto&bg=auto`}
-width="600" height="397"></iframe>
-</div>
+        <div className="icontainer">
+        <iframe title={post.frontmatter.title} className="responsive-iframe" src={`https://lichess.org/embed/${post.frontmatter.iframe}#0?theme=auto&bg=auto`}
+          width="600" height="397"></iframe>
+          </div>
         <hr
           style={{
             marginBottom: rhythm(1),
+            background: "#e3e3d3"
           }}
         />
-        <Bio />
 
         <ul
           style={{
@@ -91,8 +97,10 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         category
-        
+        iframe
       }
     }
   }
 `
+
+// <MDXRenderer>{post.body}</MDXRenderer>

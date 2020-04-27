@@ -17,13 +17,15 @@ UNSAFE_componentWillMount() {
   if (typeof window == 'undefined') {
     return;
   }
-  this.setState({category: this.props.location.state.category});
+  this.setState({ round:this.props.location.state.round, category: this.props.location.state.category});
 }
 
   handleRound = (select) => {
     this.setState({ round: select});
   }
   render() {
+    console.log(this.state.round);
+    console.log(this.state.category);
 
     return (
       <Layout location={this.props.location} >
@@ -110,7 +112,7 @@ const List = styled.ul`
       padding: 0.5rem 0.6rem;
       margin: 0.7rem;
       border-radius: 2px;
-      font-weight: bold;
+      font-size: 0.9em;
       &:hover {
         box-shadow: inset 1px 1px 2px #161616,
             inset -1px -1px 2px #4f4f4f;
@@ -142,6 +144,7 @@ export const pageQuery = graphql`
             title
             description
             category
+            iframe
           }
         }
       }
