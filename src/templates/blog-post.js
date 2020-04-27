@@ -72,7 +72,9 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
+        <div className="white">
         <Commento id={post.id}/>
+        </div>
       </Layout>
     )
   }

@@ -18,17 +18,17 @@ class IndexPage extends React.Component {
         />
         <HomeList>
           <li>
-          <Link state={{ category: "Groep A" }}to="/blog/">
+          <Link state={{ category: "Groep A", round: "1" }}to="/blog/">
             <Button marginTop="35px">Groep A</Button>
           </Link>
           </li>
           <li>
-          <Link state={{ category: "Groep B"}}to="/blog/">
+          <Link state={{ category: "Groep B", round: "1" }}to="/blog/">
             <Button marginTop="35px">Groep B</Button>
           </Link>
           </li>
           <li>
-          <Link state={{ category: "groepc" }}to="/blog/">
+          <Link state={{ category: "Groep C", round: "1"  }}to="/blog/">
             <Button marginTop="35px">Groep C</Button>
           </Link>
           </li>

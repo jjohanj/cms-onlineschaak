@@ -45,6 +45,7 @@ UNSAFE_componentWillMount() {
         </Link></li>
         </List>
         <GameList>
+        <h2>Ronde {this.state.round}</h2>
           {this.state.posts.filter(e => e.node.frontmatter.category.includes(this.state.category) && e.node.frontmatter.description.includes(this.state.round)).map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
@@ -91,6 +92,7 @@ const GameList = styled.ul `
 
 const List = styled.ul`
     list-style: none;
+    margin-bottom: 0;
     li {
       display: inline-block;
       &:last-child button {
