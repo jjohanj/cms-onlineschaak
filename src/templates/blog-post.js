@@ -13,7 +13,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.mdx
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-
+    console.log(post.body)
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -31,9 +31,10 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
-        <iframe src="https://lichess.org/embed/RxZTgNXz#5?theme=auto&bg=auto"
+        <div>
+        <iframe src={`https://lichess.org/embed/${post.body}#0?theme=auto&bg=auto`}
 width="600" height="397"></iframe>
+</div>
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -90,6 +91,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         category
+        iframe
       }
     }
   }
