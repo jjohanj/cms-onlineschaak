@@ -43,7 +43,7 @@ const HomeList = styled.ul `
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 20%;
+  margin-top: 4rem;
 
   li {
     margin-bottom: 40px;

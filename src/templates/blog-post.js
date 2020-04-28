@@ -13,13 +13,13 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={post.frontmatter.category}>
+      <Layout location={this.props.location} title={post.frontmatter.title}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
-        <p style={{ float: `right`}}>
+        <p style={{ textAlign: `right`,
+                    marginTop: `1rem`}}>
         <Link to="/">
         <button>Home</button>
         </Link>

@@ -28,10 +28,9 @@ UNSAFE_componentWillMount() {
     console.log(this.state.category);
 
     return (
-      <Layout location={this.props.location} >
+      <Layout location={this.props.location} title={this.state.category}>
         <SEO title="All posts" title="Blog" />
-        <div style={{ margin: "20px 0 40px" }}>
-        <h1>{this.state.category}</h1>
+        <div style={{ margin: "15px 0 40px" }}>
         <List>
         <li><button onClick={(event) => { this.handleRound(1);}}>Ronde 1</button></li>
         <li><button onClick={(event) => { this.handleRound(2);}}>Ronde 2</button></li>
@@ -92,7 +91,7 @@ const GameList = styled.ul `
 
 const List = styled.ul`
     list-style: none;
-    margin-bottom: 0;
+    margin: 0;
     li {
       display: inline-block;
       &:last-child button {

@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import "./styles.css"
 import { rhythm, scale } from "../utils/typography"
+import {FaChess} from 'react-icons/fa';
 
 class Layout extends React.Component {
   render() {
@@ -13,24 +14,17 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath || location.pathname === blogPath) {
       header = (
+        <>
         <h1
           style={{
-            ...scale(1.2),
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
         >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={location.pathname === blogPath ? `/blog/` : `/`}
-          >
             {title}
-          </Link>
         </h1>
+        <FaChess />
+        </>
       )
     } else {
       header = (

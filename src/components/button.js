@@ -16,13 +16,13 @@ const ButtonWrapper = styled.button`
   text-transform: uppercase;
   letter-spacing: 2px;
   width: 150px;
-  height: 100px;
-  border-radius: 10px;
+  height: 70px;
+  border-radius: 2px;
   color: #e3e3e3;
   border-radius: 20px;
   background: linear-gradient(145deg, #2d2d2d, #363636);
-  box-shadow:  10px 10px 9px #191919,
-  -10px -10px 9px #4b4b4b;
+  box-shadow:  10px 10px 4px #191919,
+  -10px -10px 4px #4b4b4b;
 
   &:hover {
    background: #323232;
