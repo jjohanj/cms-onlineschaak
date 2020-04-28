@@ -19,6 +19,7 @@ class Layout extends React.Component {
           style={{
             marginBottom: rhythm(1.5),
             marginTop: 0,
+            fontSize: "2em",
           }}
         >
             {title}

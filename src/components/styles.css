@@ -57,15 +57,19 @@ button:hover {
 header {
   display: block;
   padding: 4rem;
-  background: #282828;
-  background: linear-gradient(145deg, #2b2b2b, #242424);
-  box-shadow:  20px 20px 2px #161616,
-               -20px -20px 2px #2e2e2e;
-
+  background: linear-gradient(145deg, #444, #292929);
+  box-shadow:  18px 18px 3px #161616,
+               -13px -13px 1px #666;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
 }
 svg {
   font-size: 8em;
   padding: 1rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+button svg {
+  font-size: 4em;
 }

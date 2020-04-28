@@ -106,7 +106,7 @@ const List = styled.ul`
       }
     }
     button {
-      background: #e3e3d3;
+      background: #e3e3e3;
       color: #4f4f4f;
       cursor: pointer;
       border: none;

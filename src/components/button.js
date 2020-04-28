@@ -11,24 +11,27 @@ const ButtonWrapper = styled.button`
   text-align: center;
   box-sizing: border-box;
   text-decoration: none;
-  padding: 10px 25px;
+  padding: 20px 25px;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
   width: 150px;
-  height: 70px;
+  font-size: 1.1em;
+  height: auto;
   border-radius: 2px;
   color: #e3e3e3;
   border-radius: 20px;
-  background: linear-gradient(145deg, #2d2d2d, #363636);
-  box-shadow:  10px 10px 4px #191919,
-  -10px -10px 4px #4b4b4b;
+  background: linear-gradient(145deg, #303030, #393939);
+  box-shadow:  8px 8px 3px #161616,
+               -8px -8px 3px #555555;
 
   &:hover {
-   background: #323232;
-   box-shadow:  12px 12px 9px #191919,
-              -12px -12px 9px #4b4b4b;
+    background: linear-gradient(145deg, #393939, #303030);
+    box-shadow:  6px 6px 1px #161616,
+                 -6px -6px 1px #555555;
   }
 `
+
+
 
 export default Button
