@@ -44,7 +44,7 @@ class BlogPostTemplate extends React.Component {
         <hr
           style={{
             marginBottom: rhythm(1),
-            background: "#e3e3d3"
+            background: "#e3e3e3"
           }}
         />
 
