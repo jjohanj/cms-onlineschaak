@@ -21,10 +21,10 @@ class BlogPostTemplate extends React.Component {
         <p style={{ textAlign: `right`,
                     marginTop: `1rem`}}>
         <Link to="/">
-        <button>Home</button>
+        <button className="btn-warning mr-3">Home</button>
         </Link>
         <Link state={{  round: post.frontmatter.description, category: post.frontmatter.category}}to="/blog/">
-        <button marginTop="35px">Terug</button>
+        <button className="btn-success">Terug</button>
         </Link>
         </p>
         <p

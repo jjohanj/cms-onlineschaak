@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import "./styles.css"
+import "./bootstrap.css"
 import { rhythm, scale } from "../utils/typography"
 import {FaChess} from 'react-icons/fa';
 
@@ -15,16 +16,10 @@ class Layout extends React.Component {
     if (location.pathname === rootPath || location.pathname === blogPath) {
       header = (
         <>
-        <h1
-          style={{
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-            fontSize: "2em",
-          }}
-        >
-            {title}
+        <h1>
+              <FaChess className="mr-4" />{title}
         </h1>
-        <FaChess />
+
         </>
       )
     } else {
@@ -49,41 +44,20 @@ class Layout extends React.Component {
       )
     }
     return (
-      <Wrapper>
-        <div
-          style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
-            maxWidth: rhythm(30),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-          }}
-        >
-          <header>{header}</header>
-          <main>{children}</main>
-        <Footer>
+      <div className="relative">
+          <header className="container">{header}</header>
+          <main className="container">{children}</main>
+        <Footer className="container">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Footer>
         </div>
-      </Wrapper>
     )
   }
 }
 
-
-const Wrapper = styled.div`
-  min-height: 100vh;
-  position: relative;
-`
-
 const Footer = styled.footer`
-  text-align: center;
-  margin: 24px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
   text-align: center;
 }
 `

@@ -1,6 +1,14 @@
 body {
-  background: #323232;
-  color: #e3e3e3;
+  background: #333;
+  color: #fff;
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+h1 {
+  font-family: "Open Sans"!important;
+  font-weight: 300;
+  text-align: center;
+  padding: 3rem 0;
 }
 
 a {
@@ -25,9 +33,15 @@ button:hover {
   box-shadow: inset 1px 1px 2px #161616,
       inset -1px -1px 2px #4f4f4f;
   }
-  button:first-child {
-    margin-left: 0;
-  }
+button:first-child {
+  margin-left: 0;
+}
+ul li:nth-child(odd) button {
+  background: #262626;
+}
+ul li:nth-child(even) button {
+  background: #404040;
+}
 
   .icontainer {
   position: relative;
@@ -53,23 +67,11 @@ button:hover {
 .commento-comments p {
   color: #e3e3e3!important;
 }
+video {
+-webkit-filter: grayscale(85%); /* Safari 6.0 - 9.0 */
+filter: grayscale(85%);
+}
 
-header {
-  display: block;
-  padding: 4rem;
-  background: linear-gradient(145deg, #444, #292929);
-  box-shadow:  18px 18px 3px #161616,
-               -13px -13px 1px #666;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-svg {
-  font-size: 8em;
-  padding: 1rem;
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
 button svg {
   font-size: 4em;
 }
