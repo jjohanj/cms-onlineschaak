@@ -21,21 +21,11 @@ class BlogPostTemplate extends React.Component {
         <p style={{ textAlign: `right`,
                     marginTop: `1rem`}}>
         <Link to="/">
-        <button className="btn-warning mr-3">Home</button>
+        <button className="btn btn-outline-light  mr-3">Home</button>
         </Link>
         <Link state={{  round: post.frontmatter.description, category: post.frontmatter.category}}to="/blog/">
-        <button className="btn-success">Terug</button>
+        <button className="btn btn-light">Terug</button>
         </Link>
-        </p>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date}
         </p>
         <div className="icontainer">
         <iframe title={post.frontmatter.title} className="responsive-iframe" src={`https://lichess.org/embed/${post.frontmatter.iframe}#0?theme=auto&bg=auto`}

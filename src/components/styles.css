@@ -29,7 +29,7 @@ button {
   border-radius: 2px;
   font-size: 0.9em;
 }
-button:hover {
+button:not(.btn):hover {
   box-shadow: inset 1px 1px 2px #161616,
       inset -1px -1px 2px #4f4f4f;
   }

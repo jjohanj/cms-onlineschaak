@@ -61,7 +61,6 @@ UNSAFE_componentWillMount() {
                     {title}
                   </Link>
                 </h3>
-                <small>{node.frontmatter.date}</small>
               </li>
             )
           })}
@@ -133,7 +132,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx {
       edges {
         node {
           excerpt
