@@ -36,10 +36,10 @@ button:hover {
 button:first-child {
   margin-left: 0;
 }
-ul li:nth-child(odd) button {
+ul li:nth-child(odd) span {
   background: #262626;
 }
-ul li:nth-child(even) button {
+ul li:nth-child(even) span {
   background: #404040;
 }
 

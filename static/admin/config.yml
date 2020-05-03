@@ -12,7 +12,6 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: description, label: Ronde }
       - { name: iframe, label: IFrame }

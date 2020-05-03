@@ -5,7 +5,7 @@ const Button = props => (
   <ButtonWrapper props={props}>{props.children}</ButtonWrapper>
 )
 
-const ButtonWrapper = styled.button`
+const ButtonWrapper = styled.span`
   border: none;
   text-align: center;
   box-sizing: border-box;

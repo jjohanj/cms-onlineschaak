@@ -29,7 +29,7 @@ class IndexPage extends React.Component {
           <li className="col-12">
             <Link  className="text-success" state={{ category: "Groep A", round: "1" }}to="/blog/">
             <FaChessKing/>
-              <Button>Groep A</Button>
+            <Button>Groep A</Button>
             </Link>
           </li>
           <li className="col-12">
@@ -59,7 +59,7 @@ const HomeList = styled.ul `
     a {
       position: relative;
       border-bottom: 3px solid #404040;
-    button {
+    span {
         display:block;
         vertical-align: middle;
         border-radius: 20px;
