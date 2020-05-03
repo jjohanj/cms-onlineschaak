@@ -70,11 +70,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Onlineschaakcompetitiepartijen`,
+        short_name: `Schaakpartijen`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#333`,
         display: `minimal-ui`,
         // edit below
         icon: `content/assets/gatsby-icon.png`,

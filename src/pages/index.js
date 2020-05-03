@@ -20,26 +20,26 @@ class IndexPage extends React.Component {
         />
         <section className="row">
         <div className="col-12 embed-responsive embed-responsive-21by9">
-            <video className="video-fluid" autoPlay loop muted>
+            <video className="video-fluid" autoPlay muted>
       <source src="./chess.mp4" type="video/mp4" />
     </video>
     </div>
     </section>
         <HomeList className="row mt-5">
           <li className="col-12">
-            <Link  className="text-success" state={{ category: "Groep A", round: "1" }}to="/blog/">
+            <Link  className="text-success" state={{ category: "Groep A", round: "5" }}to="/blog/">
             <FaChessKing/>
             <Button>Groep A</Button>
             </Link>
           </li>
           <li className="col-12">
-          <Link className="text-info" state={{ category: "Groep B", round: "1" }}to="/blog/">
+          <Link className="text-info" state={{ category: "Groep B", round: "5" }}to="/blog/">
           <FaChessQueen />
             <Button>Groep B</Button>
           </Link>
           </li>
           <li className="col-12">
-          <Link className="text-warning" state={{ category: "Groep C", round: "1"  }}to="/blog/">
+          <Link className="text-warning" state={{ category: "Groep C", round: "5"  }}to="/blog/">
           <FaChessRook />
             <Button>Groep C</Button>
           </Link>

@@ -24,30 +24,16 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/blog/`}
-          >
+        <h1 className="my-5 p-4 text-left">
             {title}
-          </Link>
-        </h3>
+        </h1>
       )
     }
     return (
-      <div className="relative">
+      <div className="relative wrapper">
           <header className="container">{header}</header>
           <main className="container">{children}</main>
-        <Footer className="container">
+        <Footer className="container mt-5">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
@@ -58,7 +44,7 @@ class Layout extends React.Component {
 }
 
 const Footer = styled.footer`
-  text-align: center;
+  text-align: right;
 }
 `
 

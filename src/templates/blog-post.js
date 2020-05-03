@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
@@ -20,51 +21,16 @@ class BlogPostTemplate extends React.Component {
         />
         <p style={{ textAlign: `right`,
                     marginTop: `1rem`}}>
-        <Link to="/">
-        <button className="btn btn-outline-light  mr-3">Home</button>
+        <Link className="btn btn-outline-light mr-3" to="/">Home
         </Link>
-        <Link state={{  round: post.frontmatter.description, category: post.frontmatter.category}}to="/blog/">
-        <button className="btn btn-light">Terug</button>
+        <Link className="btn btn-light" state={{  round: post.frontmatter.description, category: post.frontmatter.category}}to="/blog/">
+        Terug
         </Link>
         </p>
         <div className="icontainer">
         <iframe title={post.frontmatter.title} className="responsive-iframe" src={`https://lichess.org/embed/${post.frontmatter.iframe}#0?theme=auto&bg=auto`}
           width="600" height="397"></iframe>
           </div>
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-            background: "#e3e3e3"
-          }}
-        />
-
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={`blog${previous.fields.slug}`} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={`blog${next.fields.slug}`} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-        <div className="white">
-        <Commento id={post.id}/>
-        </div>
       </Layout>
     )
   }
