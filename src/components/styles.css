@@ -68,6 +68,20 @@ ul li:nth-child(even) span {
   color: #e3e3e3!important;
 }
 
+.home-btn {
+    border: none;
+    background: linear-gradient(145deg, #2d2d2d, #363636);
+    box-shadow:  3px 3px 1px #161616,
+    -3px -3px 1px #4f4f4f;
+    color: #E3E3d3;
+}
+
+.home-btn:hover {
+  color: #E3E3d3;
+  box-shadow: inset 1px 1px 2px #161616,
+  inset -1px -1px 2px #4f4f4f;
+}
+
 button svg {
   font-size: 4em;
 }

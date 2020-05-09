@@ -4,7 +4,6 @@ import styled from "styled-components"
 import "./styles.css"
 import "./bootstrap.css"
 import { rhythm, scale } from "../utils/typography"
-import {FaChess} from 'react-icons/fa';
 
 class Layout extends React.Component {
   render() {
@@ -17,7 +16,7 @@ class Layout extends React.Component {
       header = (
         <>
         <h1>
-              <FaChess className="mr-4" />{title}
+            {title}
         </h1>
 
         </>

@@ -21,10 +21,10 @@ class BlogPostTemplate extends React.Component {
         />
         <p style={{ textAlign: `right`,
                     marginTop: `1rem`}}>
-        <Link className="btn btn-outline-light mr-3" to="/">Home
-        </Link>
         <Link className="btn btn-light" state={{  round: post.frontmatter.description, category: post.frontmatter.category}}to="/blog/">
         Terug
+        </Link>
+        <Link className="home-btn btn ml-3" to="/">Home
         </Link>
         </p>
         <div className="icontainer">
@@ -59,5 +59,6 @@ export const pageQuery = graphql`
     }
   }
 `
+
 
 // <MDXRenderer>{post.body}</MDXRenderer>

@@ -41,7 +41,7 @@ UNSAFE_componentWillMount() {
         </Link></li>
         </List>
         <GameList>
-        <h2 className="text-success h1 py-4">Ronde {this.state.round}</h2>
+        <h2 className="text-success h2 py-4">Ronde {this.state.round}</h2>
           {this.state.posts.filter(e => e.node.frontmatter.category.includes(this.state.category) && e.node.frontmatter.description.includes(this.state.round)).map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
