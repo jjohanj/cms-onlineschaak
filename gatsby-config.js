@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Gatsby Starter Personal Blog`,
-    author: `Kyle Matthews`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Online-schaakcompetitie-partijen`,
+    author: `Johan`,
+    description: `Gespeelde partijen in de onlineschaakcompetitie`,
+    siteUrl: `https://Onlineschaakcompetitiepartijen.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `none`,
     },
   },
   plugins: [
@@ -77,7 +77,7 @@ module.exports = {
         theme_color: `#333`,
         display: `minimal-ui`,
         // edit below
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/chess.jpg`,
       },
     },
     {

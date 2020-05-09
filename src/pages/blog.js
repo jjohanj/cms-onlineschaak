@@ -69,8 +69,10 @@ const GameList = styled.ul `
     margin: 0;
     font-size: 1.3em;
     position: relative;
-    padding-left: 1rem;
-
+    padding-left: 2rem;
+    &:nth-child(even) {
+      background: #404040;
+    }
     a {
       color: #e3e3e3;
       display: block;
@@ -79,7 +81,7 @@ const GameList = styled.ul `
     svg {
       font-size: 0.8em;
       position: absolute;
-      left: 0;
+      left: 1rem;
       top: 50%;
       transform: translateY(-50%);    }
   }

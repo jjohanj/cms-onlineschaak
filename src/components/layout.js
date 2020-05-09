@@ -35,7 +35,7 @@ class Layout extends React.Component {
         <Footer className="container mt-5">
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.gatsbyjs.org">Gatsby</a> and <a href="https://www.netlifycms.org/">Netlify CMS</a>
         </Footer>
         </div>
     )
