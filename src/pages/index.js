@@ -20,8 +20,8 @@ class IndexPage extends React.Component {
         />
         <section className="row">
         <div className="col-12 embed-responsive embed-responsive-21by9">
-            <video className="video-fluid" autoPlay muted>
-      <source src="./chess.mp4" type="video/mp4" />
+            <video className="video-fluid" autoPlay loop muted>
+      <source src="./chessgame3.mp4" type="video/mp4" />
     </video>
     </div>
     </section>
