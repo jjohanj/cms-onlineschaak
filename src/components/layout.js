@@ -23,7 +23,7 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h1 className="my-5 p-4 text-left">
+        <h1 className="my-5 pt-4 pb-2 text-left">
             {title}
         </h1>
       )
