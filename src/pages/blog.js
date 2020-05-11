@@ -68,7 +68,7 @@ const GameList = styled.ul `
     position: relative;
     border-radius: 2px;
     margin: 0;
-    font-size: 1.3em;
+    font-size: 1.2em;
     position: relative;
     padding-left: 2rem;
     &:nth-child(even) {
@@ -96,7 +96,6 @@ const List = styled.ul`
     li {
       margin: 0;
       display: inline-block;
-      font-size: 0.9em;
       &:last-child button {
         border: none;
         background: linear-gradient(145deg, #2d2d2d, #363636);
