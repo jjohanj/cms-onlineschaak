@@ -19,7 +19,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <p style={{ textAlign: `right`,
+        <p style={{ textAlign: `center`,
                     marginTop: `1rem`}}>
         <Link className="btn btn-light" state={{  round: post.frontmatter.description, category: post.frontmatter.category}}to="/blog/">
         Terug
@@ -27,7 +27,7 @@ class BlogPostTemplate extends React.Component {
         <Link className="home-btn btn ml-3" to="/">Home
         </Link>
         </p>
-        <div className="icontainer">
+        <div className="icontainer mt-5">
         <iframe title={post.frontmatter.title} className="responsive-iframe" src={`https://lichess.org/embed/${post.frontmatter.iframe}#0?theme=auto&bg=auto`}
           width="600" height="397"></iframe>
           </div>
