@@ -63,6 +63,7 @@ UNSAFE_componentWillMount() {
 
 const GameList = styled.ul `
   list-style: none;
+  margin-left: 0;
   li {
     position: relative;
     border-radius: 2px;
@@ -91,9 +92,11 @@ const GameList = styled.ul `
 const List = styled.ul`
     list-style: none;
     margin: 0;
+    text-align: center;
     li {
       margin: 0;
       display: inline-block;
+      font-size: 0.9em;
       &:last-child button {
         border: none;
         background: linear-gradient(145deg, #2d2d2d, #363636);
